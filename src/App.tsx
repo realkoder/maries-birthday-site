@@ -18,6 +18,7 @@ function App() {
         <p className="text-xl text-white">
           🇩🇰 Så blev det din fødselsdag - YAY 🇩🇰
         </p>
+
         <BirthdayDialog />
         <BirtdayImageDisplayer />
       </div>
