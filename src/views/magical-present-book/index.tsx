@@ -1,10 +1,10 @@
-import { MlbImage } from "@/components/image-atoms/mlb";
+import { MblImage } from "@/components/image-atoms/mbl";
 
 export function MagicalPresentBookView() {
   return (
     <div className="flex flex-col items-center gap-4">
       <header className="flex flex-col items-center gap-9">
-        <MlbImage />
+        <MblImage />
         <p className="text-5xl font-bold text-white drop-shadow-lg">
           TILLYKKE MISKATH! 🎉
         </p>
