@@ -2,7 +2,12 @@ import { toast } from "sonner";
 import { ImageRain } from "../image-rain-effect";
 import { useState } from "react";
 
-export function MblImage() {
+interface ImgFixedSizeProps {
+  imgSrc: string;
+  imgEffectSrc: string;
+}
+
+export function ImgFixedSize({ imgSrc, imgEffectSrc }: ImgFixedSizeProps) {
   const [shouldRainHorseImg, setShouldRainHorseImg] = useState(false);
 
   function triggerImgRain() {
@@ -16,11 +21,9 @@ export function MblImage() {
       onClick={triggerImgRain}
       className="w-40 h-40 bg-fuchsia-300 rounded-lg shadow-md flex items-center justify-center"
     >
-      {shouldRainHorseImg && (
-        <ImageRain imageSrc="./src/assets/dum-hest.jpeg" />
-      )}
+      {shouldRainHorseImg && <ImageRain imageSrc={imgEffectSrc} />}
       <img
-        src="mbl.png"
+        src={imgSrc}
         alt="MBL"
         className="w-full h-full object-cover m-2 rounded-lg shadow-lg cursor-pointer"
         onClick={() => toast.info("Så smuk jeg dåner! 🦄💘🦄")}
