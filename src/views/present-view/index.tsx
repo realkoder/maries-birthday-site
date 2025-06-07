@@ -20,7 +20,7 @@ export default function UnicornBirthdayView() {
               </span>
               <Sparkles className="text-yellow-500 animate-pulse" />
             </div>
-            
+
             <p className="text-lg md:text-xl text-pink-800 font-medium">
               En overraskelse - vi skal have et efterårsophold 💖
             </p>

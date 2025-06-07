@@ -19,7 +19,7 @@ export function ImgFixedSize({ imgSrc, imgEffectSrc }: ImgFixedSizeProps) {
   return (
     <div
       onClick={triggerImgRain}
-      className="w-40 h-40 bg-fuchsia-300 rounded-lg shadow-md flex items-center justify-center"
+      className="w-40 h-40 m-4 bg-fuchsia-300 rounded-lg shadow-md flex items-center justify-center"
     >
       {shouldRainHorseImg && <ImageRain imageSrc={imgEffectSrc} />}
       <img

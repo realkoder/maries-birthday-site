@@ -12,7 +12,7 @@ function App() {
     if (secretCounter > 5) {
       setSecretCounter(0);
       localStorage.setItem("isTaskCompleted", String(!isTaskCompleted));
-      setIsTaskCompleted(cur => !cur);
+      setIsTaskCompleted((cur) => !cur);
     }
   }, [secretCounter]);
 
@@ -34,7 +34,7 @@ function App() {
       <header className="flex flex-col items-center gap-9 p-4">
         <ImgFixedSize imgSrc="mbl.png" imgEffectSrc="dum-hest.jpeg" />
         <p
-          className="text-5xl font-bold text-white drop-shadow-lg"
+          className="text-5xl text-center font-bold text-white drop-shadow-lg"
           onClick={() => setSecretCounter((cur) => (cur += 1))}
         >
           TILLYKKE MISKATH! 🎉
