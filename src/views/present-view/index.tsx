@@ -1,8 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Gift, Heart } from "lucide-react";
 import { motion } from "framer-motion";
+import countries from "@/static/countries.json";
+import { useEffect, useState } from "react";
 
 export default function UnicornBirthdayView() {
+  const getRandomCountryNum = () =>
+    countries[Math.floor(Math.random() * (countries.length - 1))];
+  const [randomCountry, setRandomCountry] = useState(getRandomCountryNum());
+
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setRandomCountry(getRandomCountryNum()),
+      5000
+    );
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <div className="flex items-center justify-center p-4">
       <motion.div
@@ -26,6 +40,31 @@ export default function UnicornBirthdayView() {
             </p>
 
             <div className="flex flex-col items-center gap-6 mt-8">
+              {randomCountry && (
+                <div className="flex flex-col items-center gap-2 mb-4">
+                  <div className="flex items-center gap-3 bg-gradient-to-r from-pink-200 via-fuchsia-100 to-purple-200 px-6 py-3 rounded-full shadow-xl border-4 border-fuchsia-300">
+                    <span className="text-3xl animate-bounce">🦄</span>
+                    <img
+                      src={randomCountry.flags.svg}
+                      alt={randomCountry.flags.alt || randomCountry.name.common}
+                      className="w-16 h-12 rounded-lg border-2 border-pink-400 shadow-md bg-white"
+                      style={{ background: "white" }}
+                    />
+                    <span className="text-2xl font-extrabold text-fuchsia-700 drop-shadow-lg tracking-wide">
+                      {randomCountry.name.common}
+                    </span>
+                    <span className="text-3xl animate-bounce">✨</span>
+                  </div>
+                  <a
+                    href={`https://en.wikipedia.org/wiki/${randomCountry.name.common}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="italic text-pink-500 text-lg font-semibold mt-1 underline hover:text-fuchsia-600 transition-colors"
+                  >
+                    Vi kunne prøve {randomCountry.name.common}?
+                  </a>
+                </div>
+              )}
               <a
                 href="https://hotels.com"
                 target="_blank"
