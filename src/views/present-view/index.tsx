@@ -27,7 +27,7 @@ export default function UnicornBirthdayView() {
       >
         <Card className="rounded-2xl bg-white/80 shadow-2xl border-pink-300 border-2 p-2">
           <CardContent className="text-center space-y-6">
-            <div className="flex justify-center items-center gap-2 text-pink-600 text-2xl font-bold">
+            <div className="flex justify-center items-center text-pink-600 text-2xl font-bold">
               <Sparkles className="text-yellow-500 animate-pulse" />
               <span className="bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-full shadow-lg">
                 Happy Birthday, Princess! 🎉🦄
@@ -36,7 +36,10 @@ export default function UnicornBirthdayView() {
             </div>
 
             <p className="text-lg md:text-xl text-pink-800 font-medium">
-              En overraskelse - vi skal have et efterårsophold 💖
+              En overraskelse - vi skal selføgelig ud at rejse sammen - men det er ikke gaven 💖
+            </p>
+            <p className="text-sm text-pink-800 m-0">
+            SÅ DET ER IKKE DIN OVERRASKELSE - KIG UNDER SENGEN????
             </p>
 
             <div className="flex flex-col items-center gap-6 mt-8">
@@ -61,7 +64,7 @@ export default function UnicornBirthdayView() {
                     rel="noopener noreferrer"
                     className="italic text-pink-500 text-lg font-semibold mt-1 underline hover:text-fuchsia-600 transition-colors"
                   >
-                    Vi kunne prøve {randomCountry.name.common}?
+                    Vi kunne prøve at tage til {randomCountry.name.common} en dag?
                   </a>
                 </div>
               )}
