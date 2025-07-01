@@ -36,10 +36,10 @@ export default function UnicornBirthdayView() {
             </div>
 
             <p className="text-lg md:text-xl text-pink-800 font-medium">
-              En overraskelse - vi skal selføgelig ud at rejse sammen - men det er ikke gaven 💖
+              En overraskelse - vi skal selføgelig ud at rejse sammen til efteråret, hvis du har lyst, men det bliver for egen regning lol lol lol - så det er ikke gaven 💖
             </p>
             <p className="text-sm text-pink-800 m-0">
-            SÅ DET ER IKKE DIN OVERRASKELSE - KIG UNDER SENGEN????
+            Det er altså IKKE DIN OVERRASKELSE - KIG VED TOASTEREN????
             </p>
 
             <div className="flex flex-col items-center gap-6 mt-8">
@@ -64,7 +64,7 @@ export default function UnicornBirthdayView() {
                     rel="noopener noreferrer"
                     className="italic text-pink-500 text-lg font-semibold mt-1 underline hover:text-fuchsia-600 transition-colors"
                   >
-                    Vi kunne prøve at tage til {randomCountry.name.common} en dag?
+                    Vi kunne checke {randomCountry.name.common} ud en dag?
                   </a>
                 </div>
               )}
