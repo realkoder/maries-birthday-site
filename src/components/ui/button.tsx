@@ -15,6 +15,8 @@ const buttonVariants = cva(
           "bg-destructive text-white shadow-xs hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         pinky:
           "bg-pink-500 text-white font-semibold text-lg shadow-md hover:bg-pink-600 hover:text-pink-100",
+        neon:
+          "bg-gradient-to-r from-pink-600/30 to-purple-600/30 text-pink-100 font-semibold border border-pink-500/40 shadow-[0_0_15px_rgba(255,0,128,0.3)] hover:shadow-[0_0_25px_rgba(255,0,128,0.5)] hover:bg-pink-600/40 transition-all duration-300",
         success:
           "bg-gradient-to-r from-pink-200 via-purple-200 via-blue-200 to-green-200 text-pink-700 font-bold shadow-lg hover:from-pink-300 hover:to-green-300 border-2 border-white/70 animate-pulse",
         outline:
